@@ -12,9 +12,6 @@ import java.util.stream.Stream;
  */
 public class MainTest {
 
-
-    ///hhhhhhhhhh
-
     /**
      * 测试Lambda表达式
      */
