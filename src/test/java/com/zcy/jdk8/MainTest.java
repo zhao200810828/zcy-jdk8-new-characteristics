@@ -2,7 +2,6 @@ package com.zcy.jdk8;
 
 import org.junit.Test;
 
-import java.lang.reflect.Array;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -11,6 +10,8 @@ import java.util.stream.Stream;
  * Created by sue on 2018/11/27.
  */
 public class MainTest {
+
+    //测试git回退功能
 
     /**
      * 测试Lambda表达式
