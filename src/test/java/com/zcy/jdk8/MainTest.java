@@ -3,6 +3,7 @@ package com.zcy.jdk8;
 import org.junit.Test;
 
 import java.lang.reflect.Array;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -141,4 +142,21 @@ public class MainTest {
                 anyMatch(p -> p.getAge() < 12);
         System.out.println("Any child? " + isThereAnyChild);
     }
+
+    /**
+     * 8.新增base64加解密API
+     */
+    @Test
+    public void testBase64() {
+        final String text = "就是要测试加解密！！abjdkhdkuasu!!@@@@";
+        String encoded = Base64.getEncoder()
+                .encodeToString(text.getBytes(StandardCharsets.UTF_8));
+        System.out.println("加密后=" + encoded);
+
+        final String decoded = new String(
+                Base64.getDecoder().decode(encoded),
+                StandardCharsets.UTF_8);
+        System.out.println("解密后=" + decoded);
+    }
+
 }
